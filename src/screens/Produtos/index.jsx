@@ -1,4 +1,4 @@
-import Api from "../../service/api";
+import Api from "../../service/Api.js";
 import React, { useEffect, useState } from "react";
 
 export const Produtos = () => {
@@ -14,6 +14,6 @@ export const Produtos = () => {
           });
       }, []);
       
-      return (<>{produtos.map((produto) => {return (<><h1>{produto.fotoLink}</h1> <img src={produto.fotoLink} alt="" /> </>) })}</>)
+      return (<>{produtos.map((produto) => {return (<><h1 key={produto.id}>{produto.fotoLink}</h1> <img src={produto.fotoLink} alt="" /> </>) })}</>)
 
 }
