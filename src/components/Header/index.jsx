@@ -14,6 +14,7 @@ const Header = () => {
             <li><Link to={'/pedido'} >Pedido</Link></li>
             <li><Link to={'/clientes'}>Clientes</Link></li>
             <li><Link to={'/funcionarios'} >Funcionarios</Link></li>
+            <li><Link to={'/gerenciar'} >Gerenciar</Link></li>
         </ul>
     )
 }

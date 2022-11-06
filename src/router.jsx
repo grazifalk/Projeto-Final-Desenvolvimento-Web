@@ -5,6 +5,8 @@ import Pedido from "./screens/Pedido";
 import Clientes from "./screens/Clientes";
 import Funcionarios from "./screens/Funcionarios";
 import Header from "./components/Header"
+import DetalheProduto from "./screens/DetalheProduto";
+import Gerenciar from "./screens/Gerenciar";
 
 // 2° Importar o React e tambem os componentes do React Router Dom.
 import React from "react";
@@ -23,9 +25,11 @@ const Router = () => (
         <Routes>
             <Route exact path="/" element={<Home/>}/> 
             <Route path="/produtos" element={<Produtos/>}/> 
+            <Route path="/produto/:id" element={<DetalheProduto />}/> 
             <Route path="/pedido" element={<Pedido/>}/> 
             <Route path="/clientes" element={<Clientes/>}/> 
-            <Route path="/funcionarios" element={<Funcionarios/>}/> 
+            <Route path="/funcionarios" element={<Funcionarios/>}/>
+            <Route path="/gerenciar" element={<Gerenciar/>}/> 
         </Routes>
     </BrowserRouter>
 );

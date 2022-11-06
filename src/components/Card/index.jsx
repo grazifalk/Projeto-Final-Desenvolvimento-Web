@@ -1,13 +1,14 @@
 import { Card } from "react-bootstrap";
 import React, { useEffect, useState } from "react";
-import Api from "../../service/Api.js";
-import { Link } from "react-router-dom";
+import { api } from "../../api";
+
+// import { Link } from "react-router-dom";
 
 export const CardProdutos = (props) => {
   const [produtos, setProduto] = useState([]);
 
   useEffect(() => {
-    Api.get("/produto")
+    api.get("/produto")
       .then((response) => setProduto(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
