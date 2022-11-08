@@ -20,6 +20,17 @@ export const Atualizar = () => {
     getFuncionarios();
   }, []);
 
+  useEffect(() =>{
+      const setFuncionario = () => {
+          const funcionario = listaFuncionarios.find((l) => l.id == id)
+          console.log(funcionario);
+          setNome(funcionario?.nome)
+          setCPF(funcionario?.cpf)
+  
+      }
+      setFuncionario();
+    },[id]);
+
   console.log(listaFuncionarios);
 
   const atualizar = (e) => {
