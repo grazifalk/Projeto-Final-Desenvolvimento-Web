@@ -21,6 +21,7 @@ export const Cadastrar = () => {
 
     return (
         <>
+
 <h1>Cadastrar funcionário</h1>
 <Form onSubmit={(e) => cadastrar(e)}>
         <Form.Group>
@@ -38,6 +39,7 @@ export const Cadastrar = () => {
           />
         </Form.Group>
         <Button type="submit">Cadastrar</Button>
+        
       </Form>
       </>
     );

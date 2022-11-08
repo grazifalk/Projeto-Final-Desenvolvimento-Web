@@ -29,6 +29,7 @@ const Router = () => (
             <Route path="/pedido" element={<Pedido/>}/> 
             <Route path="/clientes" element={<Clientes/>}/> 
             <Route path="/funcionarios" element={<Funcionarios/>}/>
+            {/* <Route path="/categorias" element={<Categorias />}/>  */}
             <Route path="/gerenciar" element={<Gerenciar/>}/> 
         </Routes>
     </BrowserRouter>
