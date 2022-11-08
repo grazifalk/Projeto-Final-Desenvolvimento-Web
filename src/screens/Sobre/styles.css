@@ -1,0 +1,13 @@
+container .article .githubavatar{
+    float: left; 
+    width: 150px; 
+    margin-left: 20px;
+    
+}
+
+.container .article .githublink{
+    border: 5px solid rgba(255, 255, 255, 0); 
+    width: 60px; 
+    margin-left: 20px;
+    text-align: center;
+}

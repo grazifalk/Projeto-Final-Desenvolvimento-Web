@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { api } from "../../../api";
-import "./styles.css"
+import "./styles.css";
 
 export const Cadastrar = () => {
     const [cpf, setCPF] = useState("");
@@ -42,7 +42,7 @@ export const Cadastrar = () => {
           onChange={(e) => setNome(e.target.value)}
           />
         </Form.Group>
-        <Button type="submit" className="button-submit">Cadastrar</Button>
+        <button type="submit" className="btn btn-outline-primary mt-5">Cadastrar</button>
         
       </Form>
 
