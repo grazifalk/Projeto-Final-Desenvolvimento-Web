@@ -1,3 +1,7 @@
+.header-ul:hover {
+color: #e74c3c;
+}
+
 ul {
     list-style-type: none;
     margin: 0;

@@ -1,5 +1,5 @@
-import "./styles.css";
 import { Link } from "react-router-dom";
+import "./styles.css";
 
 export const Gerenciar = () => {
 
@@ -9,7 +9,7 @@ export const Gerenciar = () => {
             <Link className="link-button" to={'/funcionarios'} >Funcionários</Link>
             </button> 
             <button className="button-gerenciar third">
-            <Link className="link-button" to={'/produtos'} >Produtos</Link>
+            <Link className="link-button" to={'/produto-editar'} >Produtos</Link>
             </button> 
             <button className="button-gerenciar third">
             <Link className="link-button" to={'/categorias'} >Categorias</Link>
