@@ -5,28 +5,29 @@ export const CartContext = createContext({})
 export const CartProvider = ({ clildren }) => {
     const [cart, setCart] = useState([]);
 
-    function adicionarAoCarrinho, (url, name, price) {
+    
+    function handleAddItemToCart, (url, name, price) {
         const itemObject = { url, name, price };
         setCart([...cart, itemObject]);
     }
     
-    function removerDoCarrinho,(clickedItemIndex) {
-        const filteredCart = cart.filter{
+    function handleRemoveItemFromCart,(clickedItemIndex) {
+        const filteredCart = cart.filter(
             (cartItem) => cart.idexOf(cartItem) !== clicledItemIndex
-        };
+        );
         setCart(filteredCart);
     }
     
-    function limparCarrinho() {
+    function clearCart() {
         setCart([]);
     }
 
-    return {
+    return(
         <CartContext.Provide 
-	value={{ cart, adicionarAoCarrinho, removerDoCarrinho, limparCarrinho}}
+	value={{ cart, handleAddItemToCart, handleRemoveItemFromCart, clearCart}}
 	>
         {clildren}
         </CartContext.Provide>
-    }
-}
+    );
+};
 
