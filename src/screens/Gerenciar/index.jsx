@@ -4,24 +4,24 @@ import { Link } from "react-router-dom";
 export const Gerenciar = () => {
 
   return (
-<>
-        <button className="button-gerenciar">
-            <Link to={'/funcionarios'} >Funcionários</Link>
+<div className="div-menu">
+        <button className="button-gerenciar third">
+            <Link className="link-button" to={'/funcionarios'} >Funcionários</Link>
             </button> 
-            <button className="button-gerenciar">
-            <Link to={'/produtos'} >Produtos</Link>
+            <button className="button-gerenciar third">
+            <Link className="link-button" to={'/produtos'} >Produtos</Link>
             </button> 
-            <button className="button-gerenciar">
-            <Link to={'/categorias'} >Categorias</Link>
+            <button className="button-gerenciar third">
+            <Link className="link-button" to={'/categorias'} >Categorias</Link>
             </button> 
-            <button className="button-gerenciar">
-            <Link to={'/clientes'} >Clientes</Link>
+            <button className="button-gerenciar third">
+            <Link className="link-button" to={'/clientes'} >Clientes</Link>
             </button> 
-            <button className="button-gerenciar">
-            <Link to={'/pedidos'} >Pedidos</Link>
+            <button className="button-gerenciar third">
+            <Link className="link-button" to={'/pedidos'} >Pedidos</Link>
             </button> 
 
-</>
+</div>
 
   );
 };

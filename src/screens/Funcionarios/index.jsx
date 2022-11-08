@@ -1,24 +1,28 @@
-import "./styles.css"
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Cadastrar } from "../../components/Controller/Funcionario/Cadastrar";
-import { Deletar } from "../../components/Controller/Funcionario/Deletar";
 import { Atualizar } from "../../components/Controller/Funcionario/Atualizar";
+import { Deletar } from "../../components/Controller/Funcionario/Deletar";
+import "./styles.css"
 
 const Funcionarios = () => {
     const [form, setForm] = useState("");
     console.log(form);
 
     return (
-        <div>
-        <h1>Gerenciar Funcionário</h1>
-        <Button onClick={() => setForm("adicionar")}>Adicionar</Button>
-        <Button onClick={() => setForm("atualizar")}>Atualizar</Button>
-        <Button onClick={() => setForm("deletar")}>Deletar</Button>
+        <>
+        <div className="div-menu-four h1-gerenciar-funcionario">
+            <div>
+            <h1 className="h1-title">Gerenciar Funcionário</h1>
+            </div>
+        <Button className="button-gerenciar-y four" onClick={() => setForm("adicionar")}>Adicionar</Button>
+        <Button className="button-gerenciar-y four" onClick={() => setForm("atualizar")}>Atualizar</Button>
+        <Button className="button-gerenciar-y four" onClick={() => setForm("deletar")}>Deletar</Button>
         {form === "adicionar" && <Cadastrar />}
         {form === "atualizar" && <Atualizar />}
         {form === "deletar" && <Deletar />}
         </div>
+        </>
     )
 }
 

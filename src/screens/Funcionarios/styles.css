@@ -1,0 +1,85 @@
+.button-gerenciar-y {
+  width: 200px;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-gerenciar-y:hover, .button-gerenciar-y:focus {
+  color: #000000;
+  outline: 0;
+}
+
+.four {
+  border-color: #e87f64;
+  color: #000000;
+  box-shadow: 0 0 40px 40px #e87f64 inset, 0 0 0 0 #e87f64;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.four:hover {
+  box-shadow: 0 0 10px 0 #e87f64 inset, 0 0 10px 4px #e87f64;
+}
+
+.link-button {
+  text-decoration: none;
+  color: black;
+}
+
+.link-button:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.div-menu-four {
+      width: 300px; 
+      margin-left: auto;
+      margin-right: auto; 
+      margin-top: 200px;
+  }
+
+Button {
+color: black;
+  }
+
+.h1-gerenciar-funcionario {
+  width: 345px; 
+  justify-content: center;
+  align-items: center;
+  
+  /* margin-left: auto;
+  margin-right: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.button-gerenciar-y {
+  margin-left: auto;
+  margin-right: auto;
+}

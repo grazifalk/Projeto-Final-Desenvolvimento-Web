@@ -12,9 +12,11 @@ export const Cadastrar = () => {
         api.post("/funcionario", {
         cpf,
             nome
-        } )
+        } );
+        alert("Funcionário cadastrado com sucesso!")
         } catch (err) {
-            console.log(err);
+        alert("Erro!", err)
+
         }
         return;
         }
