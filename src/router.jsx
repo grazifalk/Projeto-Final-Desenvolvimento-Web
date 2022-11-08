@@ -7,6 +7,7 @@ import Funcionarios from "./screens/Funcionarios";
 import Header from "./components/Header"
 import DetalheProduto from "./screens/DetalheProduto";
 import Gerenciar from "./screens/Gerenciar";
+import Categoria from "./screens/Categoria";
 
 // 2° Importar o React e tambem os componentes do React Router Dom.
 import React from "react";
@@ -29,7 +30,7 @@ const Router = () => (
             <Route path="/pedido" element={<Pedido/>}/> 
             <Route path="/clientes" element={<Clientes/>}/> 
             <Route path="/funcionarios" element={<Funcionarios/>}/>
-            {/* <Route path="/categorias" element={<Categorias />}/>  */}
+            <Route path="/categorias" element={<Categoria />}/>  
             <Route path="/gerenciar" element={<Gerenciar/>}/> 
         </Routes>
     </BrowserRouter>
