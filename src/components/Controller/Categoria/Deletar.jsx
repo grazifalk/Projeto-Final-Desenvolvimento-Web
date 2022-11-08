@@ -1,41 +1,42 @@
+
 import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
 
 export const Deletar = () => {
-  const [listaProdutos, setListaProdutos] = useState([]);
+  const [listaCategorias, setListaCategorias] = useState([]);
   const [id, setId] = useState();
 
   useEffect(() => {
-    const getProdutos = async () => {
-      try {
-        const response = await api.get("/produto")
-        setListaProdutos(response.data);
-      } catch (err) {
-        alert("Erro", err);
-      }
+    const getCategorias = async () => {
+        try{
+            const response = await api.get("/categoria")
+            setListaCategorias(response.data);
+        } catch (err) {
+            alert("Erro", err);
+        }
     }
-    getProdutos();
-  }, [])
+    getCategorias();
+}, [])
 
   const deletar = (e) => {
     e.preventDefault();
     try {
-      Api.delete(`/produto/${id}`)
-      alert("Produto deletado com sucesso!");
+        api.delete(`/categoria/${id}`)
+        alert("Categoria deletado com sucesso!");
     } catch (err) {
-      alert("Erro", err)
+        alert("Erro", err)
     }
   }
-
+  
   return (
     <>
-      <h1>Deletar Produto</h1>
+      <h1>Deletar categoria</h1>
       <Form onSubmit={(e) => deletar(e)}>
         <Form.Group>
           <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
-            {listaProdutos.map((d) => {
+            {listaCategorias.map((d) => {
               return (
                 <option key={d.id} value={d.id}>
                   {d.nome}
