@@ -19,7 +19,7 @@ export const Cart = () => {
 
   return (
     <section className="h-100 h-custom">
-      <div className="container py-5 h-100">
+      <div className="container-carrinho py-5 h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-12">
             <div className="card card-registration card-registration-2">

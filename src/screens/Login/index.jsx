@@ -1,18 +1,18 @@
 export const Login = () => {
     return (
         <form>
-       
+       <center>
         <div class="form-outline mb-4">
           <input type="email" id="form1Example1" class="form-control" />
           <label class="form-label" for="form1Example1">Email address</label>
         </div>
-      
-       
+        </center>
+        <center>
         <div class="form-outline mb-4">
           <input type="password" id="form1Example2" class="form-control" />
           <label class="form-label" for="form1Example2">Password</label>
         </div>
-      
+        </center>
     
         <div class="row mb-4">
           <div class="col d-flex justify-content-center">

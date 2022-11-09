@@ -31,6 +31,7 @@ export const CartProvider = ({ children }) => {
     if (item && item.quantidade > 1) {
       item.quantidade = item.quantidade - 1;
       setProductsCart(itemObject);
+      alert("Quantidade alterada!");
     } else {
       const arrayFiltered = itemObject.filter((product) => product.id !== id);
       setProductsCart(arrayFiltered);
@@ -42,10 +43,13 @@ export const CartProvider = ({ children }) => {
 
     const arrayFiltered = itemObject.filter((product) => product.id !== id);
     setProductsCart(arrayFiltered);
+    alert("Produto retirado do carrinho!");
   }
 
   function clearCart() {
     setProductsCart([]);
+    alert("Carrinho esvaziado!");
+    
   }
 
   return (
