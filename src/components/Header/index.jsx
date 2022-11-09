@@ -8,9 +8,9 @@ import { NavLink } from "./styles";
 const Header = () => {
     const { productsCart } = useContext(CartContext);
 
-    if(useLocation().pathname == "/login"){
-        return (<></>);
-    }
+    // if(useLocation().pathname == "/login"){
+    //     return (<></>);
+    // }
 
     return (
         <div>

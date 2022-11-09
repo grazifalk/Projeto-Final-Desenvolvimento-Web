@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 export const Deletar = () => {
   const [listaFuncionarios, setListaFuncionarios] = useState([]);
@@ -30,8 +31,8 @@ export const Deletar = () => {
 
   return (
     <>
-      <h1>Deletar funcionário</h1>
-      <Form onSubmit={(e) => deletar(e)}>
+      <Form className="container-forms" onSubmit={(e) => deletar(e)}>
+      <h1 className="mb-5">Deletar funcionário</h1>
         <Form.Group>
           <Form.Control
             as="select"
@@ -47,7 +48,7 @@ export const Deletar = () => {
             })}
           </Form.Control>
         </Form.Group>
-        <Button type="submit">Deletar</Button>
+        <Button className="mt-5" type="submit">Deletar</Button>
       </Form>
     </>
   );
