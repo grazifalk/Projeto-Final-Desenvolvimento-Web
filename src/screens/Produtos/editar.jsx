@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Atualizar } from "../../components/Controller/Funcionario/Atualizar";
-import { Cadastrar } from "../../components/Controller/Funcionario/Cadastrar";
-import { Deletar } from "../../components/Controller/Funcionario/Deletar";
+import { Atualizar } from "../../components/Controller/Produto/Atualizar";
+import { Cadastrar } from "../../components/Controller/Produto/Cadastrar";
+import { Deletar } from "../../components/Controller/Produto/Deletar";
 
 export const ProdutosEditar = () => {
   const [form, setForm] = useState("");
   return (
     <>
-      <div className="div-menu-four h1-gerenciar-funcionario">
+      <div className="div-menu-four h1-gerenciar-produto">
         <div>
-          <h1 className="h1-title">Gerenciar Funcionário</h1>
+          <h1 className="h1-title">Gerenciar Produto</h1>
         </div>
         <Button
           className="button-gerenciar-y four"
