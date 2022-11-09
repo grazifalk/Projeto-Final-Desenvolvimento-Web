@@ -1,11 +1,12 @@
 import React from "react";
 import "./styles.js";
 import { Form } from "react-bootstrap";
+import "./styles.css";
 export const Contato = ()=> {
     return (
         <>
 
-            <div className="container">
+            <div className="container-contato">
             <h1 className="text-center mt-5">Entre em Contato</h1>
                 <Form class="form">
                     <label className="me-1" for="name">Nome Completo</label>

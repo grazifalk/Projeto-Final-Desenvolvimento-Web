@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
-
+import "./styles.css";
 export const Atualizar = () => {
   const [listaFuncionarios, setListaFuncionarios] = useState([]);
   const [id, setId] = useState();
@@ -48,8 +48,8 @@ export const Atualizar = () => {
 
   return (
     <>
-      <h1>Atualizar Funcionario</h1>
-      <Form onSubmit={(e) => atualizar(e)}>
+      <Form className="container-forms" onSubmit={(e) => atualizar(e)}>
+      <h1 className="mb-5">Atualizar Funcionario</h1>
         <Form.Group>
           <Form.Control
             as="select"
@@ -73,7 +73,7 @@ export const Atualizar = () => {
             onChange={(e) => setNome(e.target.value)}
           />
         </Form.Group>
-        <Button type="submit">Atualizar</Button>
+        <Button className="mt-5" type="submit">Atualizar</Button>
       </Form>
     </>
   );

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 
 export const Cadastrar = () => {
@@ -26,8 +27,8 @@ return;
 
         return (
             <>
-                <h1>Cadastrar Categoria</h1>
-                <Form onSubmit={(e) => cadastrar(e)}>
+                <Form className="container-forms" onSubmit={(e) => cadastrar(e)}>
+                <h1 className="mb-5">Cadastrar Categoria</h1>
                 <Form.Group>
                 <Form.Label>Descricao</Form.Label>
                 <Form.Control
@@ -42,7 +43,7 @@ return;
                     onChange={(e) => setNome(e.target.value)} 
                     />
             </Form.Group>
-            <Button type="submit">Cadastrar</Button>
+            <Button className="mt-5" type="submit">Cadastrar</Button>
             </Form>
             </>
         );

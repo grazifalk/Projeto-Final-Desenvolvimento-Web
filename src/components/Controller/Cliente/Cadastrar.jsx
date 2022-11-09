@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
-
+import "./styles.css";
 export const Cadastrar = () => {
     const [cpf, setCPF] = useState("");
     const [dataNascimento, setDataNascimento] = useState("");
@@ -44,8 +44,8 @@ export const Cadastrar = () => {
 
     return (
         <>
-<h1>Cadastrar Cliente</h1>
-<Form onSubmit={(e) => cadastrar(e)}>
+<Form className="container-forms" onSubmit={(e) => cadastrar(e)}>
+<h1 className="mb-5">Cadastrar Cliente</h1>
         <Form.Group>
         <Form.Label>Nome</Form.Label>
             <Form.Control
@@ -120,7 +120,7 @@ export const Cadastrar = () => {
           onChange={(e) => setEstado(e.target.value)}
           />
         </Form.Group>
-        <Button type="submit">Cadastrar</Button>
+        <Button className="mt-5" type="submit">Cadastrar</Button>
       </Form>
       </>
     );

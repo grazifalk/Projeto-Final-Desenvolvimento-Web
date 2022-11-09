@@ -21,6 +21,7 @@ export const CartProvider = ({ children }) => {
     }
 
     setProductsCart(itemObject);
+    alert("Produto adicionado ao carrinho!");
   }
 
   function handleRemoveItemToCart(id) {

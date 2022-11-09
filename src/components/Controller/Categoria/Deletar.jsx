@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 export const Deletar = () => {
   const [listaCategorias, setListaCategorias] = useState([]);
@@ -32,10 +33,10 @@ export const Deletar = () => {
   
   return (
     <>
-      <h1>Deletar categoria</h1>
-      <Form onSubmit={(e) => deletar(e)}>
+      <Form className="container-forms" onSubmit={(e) => deletar(e)}>
+      <h1 className="mb-5">Deletar categoria</h1>
         <Form.Group>
-          <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
+          <Form.Control className="mb-5" as="select" value={id} onChange={(e) => setId(e.target.value)}>
             {listaCategorias.map((d) => {
               return (
                 <option key={d.id} value={d.id}>
@@ -46,7 +47,7 @@ export const Deletar = () => {
           </Form.Control>
         </Form.Group>
 
-        <Button type="submit">Deletar</Button>
+        <Button className="mt-5" type="submit">Deletar</Button>
       </Form>
     </>
   );

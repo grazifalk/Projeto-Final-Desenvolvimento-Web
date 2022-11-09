@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 export const BuscarTodos = () => {
     const [listaProduto, setListaProduto] = useState([]);
@@ -21,8 +22,8 @@ export const BuscarTodos = () => {
 
     return (
         <>
-            <h1>Buscar Todos os Produtos</h1>
-            <Form onSubmit={(e) => BuscarTodos(e)}>
+            <Form className="container-forms" onSubmit={(e) => BuscarTodos(e)}>
+            <h1 className="mb-5">Buscar Todos os Produtos</h1>
                 <Form.Group>
                     <Form.Control as="select" value={id} onChange={(e) => setId(e.target.value)}>
                         {listaProduto.map((d) => {
@@ -35,7 +36,7 @@ export const BuscarTodos = () => {
                     </Form.Control>
                 </Form.Group>
 
-                <Button type="submit">Buscar Todos</Button>
+                <Button className="mt-5" type="submit">Buscar Todos</Button>
             </Form>
         </>
     );

@@ -18,6 +18,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProdutosEditar } from "./screens/Produtos/editar";
 import { Cart } from "./screens/Carrinho";
 import { Contato } from "./screens/Contato";
+import { Login } from "./screens/Login";
 
 const Router = () => (
   // Serve para informar que estou trabalhando com rotas no navegador
@@ -39,6 +40,7 @@ const Router = () => (
       <Route path="/carrinho" element={<Cart />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/contato" element={<Contato />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   </BrowserRouter>
 );

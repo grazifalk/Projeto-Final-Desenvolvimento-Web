@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 export const Atualizar = () => {
 
@@ -50,8 +51,8 @@ export const Atualizar = () => {
 
       return (
       <>
-      <h1>Atualizar Categoria</h1>
-      <Form onSubmit={(e) => atualizar(e)}>
+      <Form className="container-forms" onSubmit={(e) => atualizar(e)}>
+      <h1 className="mb-5">Atualizar Categoria</h1>
       <Form.Group>
         <Form.Control
           as="select"
@@ -67,14 +68,14 @@ export const Atualizar = () => {
           type="text"
           onChange={(e) => setDescricao(e.target.value)}
           />
-          <Form.Label>nome</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control
           value={nome}
           type="text"
           onChange={(e) => setNome(e.target.value)}
         />
        </Form.Group>
-       <Button type="submit">Atualizar</Button>
+       <Button className="mt-5" type="submit">Atualizar</Button>
       </Form>
       </>
   )

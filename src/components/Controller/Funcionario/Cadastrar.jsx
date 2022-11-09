@@ -25,9 +25,9 @@ export const Cadastrar = () => {
     return (
         <>
 
-<h1>Cadastrar funcionário</h1>
 
-<Form onSubmit={(e) => cadastrar(e)}>
+<Form className="container-forms" onSubmit={(e) => cadastrar(e)}>
+<h1 className="mb-5">Cadastrar funcionário</h1>
         <Form.Group>
             <div className="label"><Form.Label>CPF</Form.Label></div>
           <Form.Control

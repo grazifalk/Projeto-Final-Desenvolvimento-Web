@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 
 export const BuscarTodos = () => {
 
@@ -27,8 +28,8 @@ console.log(listaCategorias);
 
         return (
       <>
-      <h1>Buscar tudo na Categoria</h1>
-      <Form onSubmit={(e) => BuscarTodos(e)}>
+      <Form className="container-forms" onSubmit={(e) => BuscarTodos(e)}>
+      <h1 className="mb-5">Buscar tudo na Categoria</h1>
       <Form.Group>
         <Form.Control
           as="select"
@@ -44,14 +45,14 @@ console.log(listaCategorias);
           type="text"
           onChange={(e) => setDescricao(e.target.value)}
           />
-          <Form.Label>nome</Form.Label>
+          <Form.Label>Nome</Form.Label>
           <Form.Control
           value={nome}
           type="text"
           onChange={(e) => setNome(e.target.value)}
         />
        </Form.Group>
-       <Button type="submit">BuscarTodos</Button>
+       <Button className="mt-5" type="submit">BuscarTodos</Button>
       </Form>
       </>
   )

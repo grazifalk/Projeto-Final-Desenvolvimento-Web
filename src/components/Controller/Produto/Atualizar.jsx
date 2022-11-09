@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { api } from "../../../api";
+import "./styles.css";
 //import Funcionarios from "../../../screens/Funcionarios";
 //import Categoria from "../Categoria";
 
@@ -54,8 +55,8 @@ export const Atualizar = () => {
 
     return (
         <>
-            <h1>Atualizar produto</h1>
-            <Form onSubmit={(e) => atualizar(e)}>
+            <Form className="container-forms" onSubmit={(e) => atualizar(e)}>
+            <h1 className="mb-5">Atualizar produto</h1>
                 <Form.Group>
                     <Form.Control
                         as="select"
@@ -121,7 +122,7 @@ export const Atualizar = () => {
                     />
 
                 </Form.Group>
-                <Button type="submit">Atualizar</Button>
+                <Button className="mt-5" type="submit">Atualizar</Button>
             </Form>
         </>
     )
